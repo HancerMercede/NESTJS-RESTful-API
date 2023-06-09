@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  nest:
+    container_name: nestjs_api
+    build:
+      context: ./
+    restart: always
+    ports:
+      - 3001:3000
+    environment:
+      - DB_URI_BACK=mongodb+srv://usernest:ICaIbltwyy8VvSPq@cluster01mongo.xu9zsqd.mongodb.net/curso_nestjs
+      - DB_URI=mongodb://mongo/nestjs_api
+      - JWT_SECRET = ONFKJDFBGFBIOYEQOPRUEWG497OIEDJFSDF
